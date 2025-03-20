@@ -1,8 +1,8 @@
 // Import express
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Server running on port ${port}`));
 
 
 // Middleware untuk parsing data form
@@ -142,6 +142,6 @@ app.post('/submit', (req, res) => {
 });
 
 // Jalankan server di port 3000
-app.listen(3000, () => {
-  console.log('Server berjalan di http://localhost:3000');
+app.listen(port, () => {
+    console.log(`Server berjalan di port ${port}`);
 });
