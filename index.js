@@ -7,6 +7,7 @@ app.listen(port, () => console.log(`Server running on port ${port}`));
 
 // Middleware untuk parsing data form
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 // Halaman utama yang menampilkan "Hello, World!" dan tombol menuju form
 app.get('/', (req, res) => {
